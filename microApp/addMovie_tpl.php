@@ -1,40 +1,48 @@
 <html>
-    <head>
+
+<head>
     <meta charset="UTF-8">
-    </head>
-    <body>
-        <center>
-            <h1>
-                <?php echo $message ?>
-            </h1>
-        
+</head>
+
+<body>
+    <center>
+        <h1>
+            <?php echo $message ?>
+        </h1>
+
         <br><br>
-        <a href="./">Voltar para o formulário</a>
+        <ul>
+            <li style="list-style: none"><a href="./"><span>+ Cadastrar novo filme</span></a></li>
+            <li style="list-style: none"><a href=""><span>+ Buscar filme</span></a></li>
+        </ul>
         <br><br>
         <table border="1">
             <tr>
-                <td>ID</td><td>Título</td><td>Diretor</td><td>Gênero</td><td>Gerenciar</td>
+                <td>Título</td>
+                <td>Diretor</td>
+                <td>Gênero</td>
+                <td>Gerenciar</td>
             </tr>
-            <?php 
+            <?php
             if (count($table) > 0) {
 
-                foreach($table as $id => $register) {
+                foreach ($table as $id => $register) {
                     echo "<tr>
-                    <td>$id</td>
                     <td>{$register['title']}</td>
                     <td>{$register['director']}</td>
                     <td>{$register['genre']}</td>
                     <td><a href='editMovie.php?id=$id'>Editar</a>
                     <a href='deleteMovie.php?id=$id'>Apagar</a></td>
                     </tr>";
-
-            }} else {
+                }
+            } else {
                 echo "<tr>
                 <td colspan='3'>Não há dados</td>
                 </tr>";
-            }           
-           ?>
+            }
+            ?>
         </table>
-        </center>
-    </body>
+    </center>
+</body>
+
 </html>
