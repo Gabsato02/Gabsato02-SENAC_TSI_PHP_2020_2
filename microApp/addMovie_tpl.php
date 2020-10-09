@@ -10,11 +10,12 @@
             <?php echo $message ?>
         </h1>
 
-        <br><br>
-        <a href="./" style="display: block;"><span>+ Cadastrar novo filme</span></a>
-        <a href="search.html""><span>Buscar filme</span></a>
-        <br><br>
-        <table border="1">
+        <h1>Filmes Cadastrados</h1>
+
+        <a href="./" style="display: block; margin-top: 2vh;">+ Cadastrar Novo Filme</a>
+        <a href="search.html" style="display: block; margin-top: 2vh;">Nova busca</a>
+
+        <table border="1" style="margin-top: 5vh;">
             <tr>
                 <td>Título</td>
                 <td>Diretor</td>

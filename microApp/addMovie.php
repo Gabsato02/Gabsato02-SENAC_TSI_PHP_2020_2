@@ -33,7 +33,7 @@ if ($objStatement->execute()) {
 
 $table = array();
 
-$list_sql = 'SELECT id, title, director, genre FROM movie ORDER BY id';
+$list_sql = 'SELECT id, title, director, genre FROM movie ORDER BY title';
 
 // Para cada item da consulta acima, será adicionado uma posição no vetor $table
 foreach ($objDatabase->query($list_sql) as $register) {
