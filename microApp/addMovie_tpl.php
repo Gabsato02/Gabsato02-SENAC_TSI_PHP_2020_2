@@ -8,10 +8,13 @@
                 <?php echo $message ?>
             </h1>
         
-        <br><br>
-        <a href="./">Voltar para o formulário</a>
-        <br><br>
-        <table border="1">
+            <h1>Filmes Cadastrados</h1>
+
+        <a href="./" style="display: block; margin-top: 2vh;">+ Cadastrar Novo Filme</a>
+        <a href="search.html">Buscar filme</a>
+
+
+        <table border="1" style="margin-top: 2vh;">
             <tr>
                 <td>ID</td><td>Título</td><td>Diretor</td><td>Gênero</td><td>Gerenciar</td>
             </tr>
