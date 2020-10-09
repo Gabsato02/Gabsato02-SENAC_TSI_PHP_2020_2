@@ -11,10 +11,8 @@
         </h1>
 
         <br><br>
-        <ul>
-            <li style="list-style: none"><a href="./"><span>+ Cadastrar novo filme</span></a></li>
-            <li style="list-style: none"><a href=""><span>+ Buscar filme</span></a></li>
-        </ul>
+        <a href="./" style="display: block;"><span>+ Cadastrar novo filme</span></a>
+        <a href="search.html""><span>Buscar filme</span></a>
         <br><br>
         <table border="1">
             <tr>
