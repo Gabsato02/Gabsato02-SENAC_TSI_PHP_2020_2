@@ -19,8 +19,32 @@ try {
     echo 'Connection failed: ' . $e->getMessage();
 }
 
-$sql = $db -> query('SELECT * FROM cliente');
+$sqlQuery = $db -> query('SELECT * FROM cliente');
 
-foreach ($sql as $registro) {
-    echo "Nome: {$registro['nome']} e Telefone: {$registro['telefone']}<br>";
+/* -- INSERT
+
+if ($db -> query("INSERT INTO cliente (nome, telefone) VALUES ('Dedão','12345678')")) {
+    echo "Inserido com sucesso.";
+ } else {
+    echo "Falha ao inserir";
+ } 
+ 
+-- DELETE
+
+if ($db -> query("DELETE FROM cliente WHERE nome = 'Dedão'")) {
+    echo "Excluído com sucesso.";
+ } else {
+    echo "Falha ao excluir";
+ }
+
+-- UPDATE   
+
+if ($db -> query("UPDATE cliente SET nome = 'Kaue' WHERE nome = 'Dedão'")) {
+    echo "Atualizado com sucesso.<br>";
+ } else {
+    echo "Falha ao atualizar.<br>";
+ } */
+
+ foreach ($sqlQuery as $registro) {
+    echo "Nome: {$registro['nome']}<br>Telefone: {$registro['telefone']}<br><br>";
 }
