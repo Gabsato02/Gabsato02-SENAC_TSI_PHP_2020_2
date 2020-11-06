@@ -23,6 +23,7 @@
                         <input type='password' name='password' id='password'>
                         <br><br>
                         <input type='submit' name='enter' value='Entrar'>
+                        <a href='user/register.php' style='float:right;'><span>Cadastre-se</span></a>
                         <br>
                         <?php echo (isset($message)) ? $message : ""; ?>
                     </form>
