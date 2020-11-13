@@ -4,7 +4,11 @@ include '../header_tpl.php';
 include '../index_menu_tpl.php';
 
 echo "
-    <center>
+    <center>";
+
+if (isset($error)) echo "<br><br><font color='red'>$error</font>";
+
+echo "
     <table border='1' width='50%' style='margin-top: 100px; text-align: center;'>
         <thead>
             <th>ID</th>
@@ -16,6 +20,8 @@ foreach ($list as $user) {
         <tr>
             <td>{$user['id']}</td>
             <td>{$user['email']}</td>
+            <td><a href='?delete={$user['id']}'>Apagar</a></td>
+            <td><a href='?edit={$user['id']}'>Editar</a></td>
         </tr>
          ";
 }
